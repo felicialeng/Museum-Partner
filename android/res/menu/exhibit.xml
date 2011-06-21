@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Scan" android:id="@+id/scan" android:icon="@drawable/scan"></item>
+    <item android:title="Save" android:id="@+id/save" android:icon="@drawable/bookmark">
+        <menu>
+            <item android:title="Phone" android:id="@+id/phone"></item>
+            <item android:id="@+id/bookmark" android:title="Bookmark"></item>
+        </menu>
+    </item>
+    <item android:title="Load" android:id="@+id/load" android:icon="@drawable/collection">
+        <menu>
+            <item android:id="@+id/item1" android:title="Bookmark"></item>
+            <item android:id="@+id/item2" android:title="Phone"></item>
+            <item android:id="@+id/item3" android:title="History"></item>
+        </menu>
+    </item>
+    <item android:title="Help" android:id="@+id/help" android:icon="@drawable/help"></item>
+    <item android:title="About" android:id="@+id/about" android:icon="@drawable/museum"></item>
+    
+</menu>

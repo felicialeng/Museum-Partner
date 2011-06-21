@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="org.rctech.museum"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="8" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"></uses-permission>
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".MuseumSplashActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ScannerActivity">
+            <intent-filter>
+                <action android:name="org.rctech.museum.scanner"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+        <activity android:name="WikiActivity"></activity>
+        <activity android:name="AudioActivity"></activity>
+        <activity android:name="VideoActivity"></activity>
+        <activity android:name="InfoActivity"></activity>
+        <activity android:name="ExhibitActivity" android:label="@string/app_name"
+          android:theme="@android:style/Theme.NoTitleBar"></activity>
+        <activity android:name="HelpActivity"></activity>
+        <activity android:name="SearchActivity"></activity>
+
+    </application>
+</manifest>

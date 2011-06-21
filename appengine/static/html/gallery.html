@@ -1,0 +1,16 @@
+<html>
+<head>
+<script src="/static/js/qrcode.js"></script>
+</head>
+<body>
+<a href=/><h1>Museum Partner</h1></a>
+<hr>
+<h2>QR Code Gallery</h2>
+Click on Any QR Code below.<br>
+{% for exhibit in exhibits %}
+<a href="/json?qr={{ exhibit }}"><div id="{{ exhibit }}"></div></a>
+<script>createQRButton('{{exhibit}}','{{exhibit}}', '{{exhibit}}');</script>
+<br>
+{% endfor %}
+</body>
+</html>
