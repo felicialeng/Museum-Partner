@@ -32,6 +32,7 @@
         <activity android:name="HelpActivity"></activity>
         <activity android:name="SearchActivity"></activity>
         <activity android:name="DashboardActivity"></activity>
+        <activity android:name="CollectionActivity"></activity>
 
     </application>
 </manifest>

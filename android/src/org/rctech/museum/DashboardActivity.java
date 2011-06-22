@@ -19,7 +19,27 @@ public class DashboardActivity extends MuseumActivity {
 				startActivity(new Intent(getApplicationContext(),ScannerActivity.class));
 			}
 		});
-        
+        Button btnLoad = (Button)findViewById(R.id.btn_load);
+        btnLoad.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(getApplicationContext(),CollectionActivity.class));
+			}
+		});
+        Button btnHelp = (Button)findViewById(R.id.btn_help);
+        btnHelp.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(getApplicationContext(),HelpActivity.class));
+			}
+		});
+        Button btnSearch = (Button)findViewById(R.id.btn_search);
+        btnSearch.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(getApplicationContext(),SearchActivity.class));
+			}
+		});
         Button btnDemo = (Button)findViewById(R.id.btn_demo);
         btnDemo.setOnClickListener(new OnClickListener() {
 
