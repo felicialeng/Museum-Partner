@@ -47,6 +47,13 @@ public class DashboardActivity extends MuseumActivity {
 				startActivity(new Intent(getApplicationContext(),AboutActivity.class));
 			}
 		});
+        Button btnCamera = (Button)findViewById(R.id.btn_camera);
+        btnCamera.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(getApplicationContext(),CameraActivity.class));
+			}
+		});
         
         Button btnDemo = (Button)findViewById(R.id.btn_demo);
         btnDemo.setOnClickListener(new OnClickListener() {

@@ -10,6 +10,7 @@
             <Button android:id="@+id/btn_search" android:layout_height="wrap_content" android:layout_width="wrap_content" android:drawableTop="@drawable/search" android:text="Search"></Button>
         </TableRow>
         <TableRow android:id="@+id/tableRow2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center">
+            <Button android:id="@+id/btn_camera" android:layout_height="wrap_content" android:layout_width="wrap_content" android:drawableTop="@drawable/camera" android:text="Camera"></Button>
             <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Help" android:drawableTop="@drawable/help" android:id="@+id/btn_help"></Button>
             <Button android:id="@+id/btn_about" android:layout_height="wrap_content" android:layout_width="wrap_content" android:drawableTop="@drawable/museum" android:text="About"></Button>
         </TableRow>
