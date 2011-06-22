@@ -11,7 +11,7 @@ public class DashboardActivity extends MuseumActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.splash);
+        setContentView(R.layout.main);
         Button btnScan = (Button)findViewById(R.id.btn_scan);
         btnScan.setOnClickListener(new OnClickListener() {
 			@Override
