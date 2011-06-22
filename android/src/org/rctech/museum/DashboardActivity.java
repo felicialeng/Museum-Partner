@@ -60,7 +60,11 @@ public class DashboardActivity extends MuseumActivity {
 
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(getApplicationContext(),SearchActivity.class));
+		        String qr = "Peranakan01";
+		        Intent i = new Intent(getApplicationContext(),ExhibitActivity.class);
+		        i.putExtra("json", ScannerActivity.getJSON(qr));
+		        startActivity(i);
+		        finish();
 			}
 		});
     }
