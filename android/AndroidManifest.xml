@@ -33,6 +33,7 @@
         <activity android:name="SearchActivity"></activity>
         <activity android:name="DashboardActivity"></activity>
         <activity android:name="CollectionActivity"></activity>
+        <activity android:name="AboutActivity"></activity>
 
     </application>
 </manifest>
