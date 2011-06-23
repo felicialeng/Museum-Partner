@@ -1,10 +1,10 @@
-<html>
-<body>
-<h1><a href=/>Museum Partner</a></h1>
+{% extends "base.html" %}
+
+{% block content %}
+<h1><a href=/>{% block title %}Museum Partner{% endblock %}</a></h1>
 <hr>
 <h2>Main Menu</h2>
 <a href="exhibit">Add New Exhibit</a><br>
 <a href="gallery">QR Code Gallery</a><br>
 <a href="http://museum-partner.blogspot.com">Blog</a>
-</body>
-</html>
+{% endblock %}

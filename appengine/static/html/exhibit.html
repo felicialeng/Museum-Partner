@@ -1,6 +1,7 @@
-<html>
-<body>
-<h1><a href="/">Museum Partner</a></h1>
+{% extends "base.html" %}
+
+{% block content %}
+<h1><a href="/">{% block title %}Exhibit{% endblock %}</a></h1>
 <hr>
 <h2>Add Exhibit</h2>
 <form action="/exhibit" method=post>
@@ -14,5 +15,4 @@
 	<tr><td></td><td><input type=submit value="Add Exhibit"></td></tr>
 	</table>
 </form>
-</body>
-</html>
+{% endblock %}

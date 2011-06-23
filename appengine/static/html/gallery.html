@@ -1,9 +1,9 @@
-<html>
-<head>
+{% extends "base.html" %}
+
+{% block content %}
 <script src="/static/js/qrcode.js"></script>
-</head>
-<body>
-<h1><a href=/>Museum Partner</a></h1>
+
+<h1><a href=/>{% block title %}Gallery{% endblock %}</a></h1>
 <hr>
 <h2>QR Code Gallery</h2>
 Click on Any QR Code below.<br>
@@ -12,5 +12,4 @@ Click on Any QR Code below.<br>
 <script>createQRButton('{{exhibit}}','{{exhibit}}', '{{exhibit}}');</script>
 <br>
 {% endfor %}
-</body>
-</html>
+{% endblock %}
