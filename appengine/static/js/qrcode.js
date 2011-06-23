@@ -43,6 +43,7 @@ function createQRButton(pDiv, lbl, code) {
 	pDiv.style.display = 'inline-block';
 	pDiv.style.cursor = 'pointer';
 	pDiv.style.position = 'relative';
+	
 	pDiv.onmouseover = function() {
 		if (this.closeQRCodeTimeout !== null) {
 			clearTimeout(this.closeQRCodeTimeout);
@@ -105,7 +106,7 @@ function createQRButton(pDiv, lbl, code) {
 	var img = document.createElement('img');
 	img.src = 'http://chart.apis.google.com/chart?cht=qr&chs=350x350&chl=' + code;
 	img.style.display = 'none';
-	img.style.position = 'absolute';
+	img.style.position = 'relative';
 	img.style.border = '1px solid #999999';
 	pDiv.appendChild(img);
 	

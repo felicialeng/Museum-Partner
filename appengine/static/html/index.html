@@ -1,8 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>Latest News</h2>
+<h2>Latest 20 Exhibit</h2>
+	
+<script src="/js/qrcode.js"></script>
+
+{% for exhibit in exhibits %}
 <article>
 	<h3><a href="#"></a></h3>
+	<a href="/json?qr={{ exhibit }}"><div id="{{ exhibit }}"></div></a>
+	<script>createQRButton('{{exhibit}}','{{exhibit}}', '{{exhibit}}');</script>
 </article>	
+{% endfor %}
 {% endblock %}

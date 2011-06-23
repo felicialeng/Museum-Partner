@@ -11,11 +11,18 @@ class Exhibit(db.Model):
 	audio_url = db.StringProperty()
 	wiki_url = db.StringProperty()
 	video_url = db.StringProperty()
+	date = db.DateTimeProperty(auto_now=True)
 
 class MainHandler(webapp.RequestHandler):
     def get(self):
+        exhibits = []
+        e = Exhibit.all()
+        e.order('-date')
+        for exhibit in e.fetch(limit=20):
+            exhibits.append(exhibit.qrcode)
+        template = {'exhibits':exhibits}
         path = os.path.join(os.path.dirname(__file__), 'static/html/index.html')
-        self.response.out.write(render(path,{}))
+        self.response.out.write(render(path,template))
 
 class JsonHandler(webapp.RequestHandler):
     def get(self):
