@@ -3,12 +3,82 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>{% block title %}Museum Partner{% endblock %}</title>
+<link rel="stylesheet" href="/css/styles.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
+<div id="wrapper"><!-- #wrapper -->
+	<nav><!-- top nav -->
+		<div class="menu">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/gallery">Gallery</a></li>
+				<li><a href="/exhibit">Exhibit</a></li>
+				<li><a href="http://www.github.com/yeo-eugene-oey/museum-partner/">Source Code</a>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</div>
+	</nav><!-- end of top nav -->
+	
+	<header><!-- header -->
+		<div id="plandesign"><img src="/images/plans.png" alt="" /></div>
+		<h1><a href="/">Museum Partner</a></h1>
+		<p>Explore the Museum Exhibit in Multimedia Source of Information with Museum Partner on Android.</p>
+	</header><!-- end of header -->
+	
+		<section id="main"><!-- #main content and sidebar area -->
+			<section id="content"><!-- #content -->
+        		{% block content %}{% endblock %}					
+			</section><!-- end of #content -->
+	
+			<aside id="sidebar"><!-- sidebar -->
+					<h3>Sponsors</h3>
+						<img src="/images/geek.jpg" alt="" width="125" height="125" /> 
+						<img src="/images/RP.png" alt="" width="125" height="125" /><br /><br />
+	
+					<h3>Connect With Us</h3>
+						<ul>
+							<li><a href="#">Twitter</a></li>
+							<li><a href="#">Facebook</a></li>
+						</ul>
+	
+			</aside><!-- end of sidebar -->
+	
+		</section><!-- end of #main content and sidebar-->
+		<footer>
+		<section id="footer-area">
+			<section id="footer-outer-block">
+					<aside class="footer-segment">
+							<h4>Technology</h4>
+								<ul>
+									<li><a href="#">QR Code</a></li>
+									<li><a href="#">Youtube</a></li>
+									<li><a href="#">Wikipedia</a></li>
+									<li><a href="#">Dropbox</a></li>
 
+								</ul>
+					</aside><!-- end of #first footer segment -->
+					<aside class="footer-segment">
+							<h4>Platform</h4>
+								<ul>
+									<li><a href="#">Google App Engine</a></li>
+									<li><a href="#">Android</a></li>
+								</ul>
+					</aside><!-- end of #first footer segment -->
+					<aside class="footer-segment">
+							<h4>Developer</h4>
+								<ul>
+									<li><a href="#">Eugene</a></li>
+									<li><a href="#">Felicia</a></li>
+									<li><a href="#">Tran Hung Nguyen</a>
+								</ul>
+					</aside><!-- end of #first footer segment -->
 
-    <div id="content">
-        {% block content %}{% endblock %}
-    </div>
+			</section><!-- end of footer-outer-block -->
+		</section><!-- end of footer-area -->
+	</footer>
+	
+</div><!-- #wrapper -->
 </body>
 </html>

@@ -1,15 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<script src="/static/js/qrcode.js"></script>
+<script src="/js/qrcode.js"></script>
 
-<h1><a href=/>{% block title %}Gallery{% endblock %}</a></h1>
-<hr>
-<h2>QR Code Gallery</h2>
-Click on Any QR Code below.<br>
 {% for exhibit in exhibits %}
-<a href="/json?qr={{ exhibit }}"><div id="{{ exhibit }}"></div></a>
-<script>createQRButton('{{exhibit}}','{{exhibit}}', '{{exhibit}}');</script>
-<br>
+<article>
+	<a href="/json?qr={{ exhibit }}"><div id="{{ exhibit }}"></div></a>
+	<script>createQRButton('{{exhibit}}','{{exhibit}}', '{{exhibit}}');</script>
+</article>	
 {% endfor %}
 {% endblock %}
