@@ -16,10 +16,14 @@ public class CameraActivity extends MuseumActivity {
     }
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {  
         if (requestCode == CAMERA_PIC_REQUEST) {  
-        	Bitmap thumbnail = (Bitmap) data.getExtras().get("data");   
-        	ImageView image = new ImageView(getApplication());  
-        	image.setImageBitmap(thumbnail);  
-        	setContentView(image);
+        	if (resultCode == RESULT_OK){
+	        	Bitmap thumbnail = (Bitmap) data.getExtras().get("data");   
+	        	ImageView image = new ImageView(getApplication());  
+	        	image.setImageBitmap(thumbnail);  
+	        	setContentView(image);
+        	}else{
+        		finish();
+        	}
         }  
     }  
 }
